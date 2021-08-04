@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los 7 Hábitos - Dinámica</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script defer src="js/SevenHabitsDynamic.js"></script>
+
+    <link rel="icon" href="img/Logo.png" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body onload="initializeScreen()">
+    <!-- Navbar Header -->
+    <header style="position: fixed; width: -webkit-fill-available; z-index: 100;">
+        <div class="container">
+          <nav class="navbar navbar-expand-md">
+            <a class="navbar-brand" href="Home.html#Home">
+              <img src="img/Logo.png" height="30" alt="image">
+            </a>
+      
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav3" aria-controls="navbarNav3" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse" id="navbarNav3">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="Home.html#Home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Home.html#menu">Menú</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Home.html#autora">Autora</a>
+                </li>
+              </ul>
+      
+              <!-- <a class="btn btn-outline-primary ml-md-3" href="#">High Scores</a> -->
+            </div>
+          </nav>
+        </div>
+      </header>  
+      
+      <!-- DINÁMICA - Los 7 Hábitos de la Gente Altamente Efectiva  -->
+      <section class="fdb-block" id="menu">
+        <div class="container" style="height: 100vh;">
+          <div class="row text-center">
+            <div class="col-12" style="margin-top: 7%;">
+              <h1 style="font-family: 'Special Elite', cursive; font-weight: bold;">Juega: Los 7 Hábitos de la Gente Altamente Efectiva</h1>
+            </div>
+          </div>
+          <!-- Crucigrama -->
+          <div class="row text-left mt-4" style="display: flex; align-items: center; justify-content: space-evenly; flex-direction: row;">
+            <div id="crucigrama">
+                <table id="puzzle">
+                
+                </table>
+            </div>
+                <div id="preguntas">                
+                    <table id="hintsTable" class="table table-striped">
+                        <thead>
+                          <tr style="text-align: center;">
+                            <th scope="col">Horizontal</th>
+                            <th scope="col">Vertical</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1. Ser ______ es tener el poder de elegir su propia actitud ante circunstancias.</td>
+                            <td>2. Se debe trabajar en tener buenas ______ con otras personas emocionalmente.</td>
+                            
+                          </tr>
+                          <tr>
+                            <td>4. Las personas deben ______ y ponerse en los zapatos de otra persona.</td>
+                            <td>3. Una persona necesita programar su futuro y construir una ______ personal.</td>
+                          </tr>
+                          <tr>
+                            <td>6. Una ______ permitirá a una persona enfocarse en lo que realmente es importante.</td>
+                            <td>5. Se debe pensar en ______ y evitar cualquier tipo de relación destructiva.</td>
+                          </tr>
+                          <tr>
+                            <td>7. Tipo de actividad que requiere atención inmediata.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+            <!-- Botones  -->
+            <div class="row mt-5" style="width: -webkit-fill-available; display: flex; justify-content: space-evenly;">
+                <button type="button" class="btn btn-danger" onclick="location.href='SevenHabits.html'">Regresar</button>
+                <button type="button" class="btn btn-success" onclick="respuesta()">Enviar</button>
+            </div>       
+      </section>      
+      
+      <style>
+      
+        #cross{
+          text-align: center;
+          width:30px;
+          height:30px;
+          margin: 0;
+          padding: 0;
+          border-collapse: collapse;
+          border: 1px solid white;
+        }
+        
+        tr{
+          margin: 0;
+          padding: 0;
+          border-collapse: collapse;
+        }
+        td{
+          height: 30px;
+          width: 30px;
+        }     
+        
+        #puzzle{
+          text-align: center;
+          margin: 0;
+          padding: 0;
+          border-collapse: collapse;
+          border: 1px solid black;
+        }
+        .inputBox{
+          width: 40px;
+          height:40px;
+          border: 1px solid black;
+          text-align: center;
+        }
+        #hintsTable{
+            width: 480px;
+            float: left;
+            clear: left;
+        }
+        </style>               
+    
+</body>
+</html>
