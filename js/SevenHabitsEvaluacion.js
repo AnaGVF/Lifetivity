@@ -25,6 +25,18 @@ var calificacion = 0;
     // #6
     var correcto_6 = correcto.cloneNode(true);
 
+    // #7
+    var correcto_7 = correcto.cloneNode(true);
+
+    // #8
+    var correcto_8 = correcto.cloneNode(true);
+
+    // #9
+    var correcto_9 = correcto.cloneNode(true);
+
+    // #10
+    var correcto_10 = correcto.cloneNode(true);
+
 // Respuestas Incorrectas 
 
     // #1
@@ -54,6 +66,22 @@ var calificacion = 0;
     // #6
     var incorrecto_6 = incorrecto.cloneNode(true);
     incorrecto_6.textContent = "¡Oh no! Tu respuesta es incorrecta. Stephen Covey fue el escritor del libro 'Los 7 hábitos de la gente altamente efectiva' en el año de 1989.";
+
+    // #7
+    var incorrecto_7 = incorrecto.cloneNode(true);
+    incorrecto_7.textContent = "¡Oh no! Tu respuesta es incorrecta. Las actividades urgentes son las que requieren atención inmediata. Esto es un paso importante para establecer prioridades correctamente.";
+
+    // #8
+    var incorrecto_8 = incorrecto.cloneNode(true);
+    incorrecto_8.textContent = "¡Oh no! Tu respuesta es incorrecta. El carácter está compuesto por nuestros hábitos. Éstos son factores poderosos dado que son pautas consistentes, de modo constante y cotidiano que expresan nuestra efectividad o inefectividad.";
+
+    // #9
+    var incorrecto_9 = incorrecto.cloneNode(true);
+    incorrecto_9.textContent = "¡Oh no! Tu respuesta es incorrecta. Sinergizar es el hábito donde se obtiene el resultado del trabajo en equipo y la innovación. La síntesis de ideas divergentes produce ideas mejores y superiores a las ideas individuales.";
+
+    // #10
+    var incorrecto_10 = incorrecto.cloneNode(true);
+    incorrecto_10.textContent = "¡Oh no! Tu respuesta es incorrecta. La empatía nos ayuda a comprender y escuchar lo que una persona nos está intentando decir. En otras palabras, es la capacidad para ponerse en el lugar de otro y comprender exactamente lo que siente o piensa.";
 
     // Función de Calificar 
     function submit() {
@@ -115,6 +143,46 @@ var calificacion = 0;
         } else if ($('#bill').is(':checked') || $('#carlos').is(':checked') || $('#hawking').is(':checked')) {
             document.getElementById("retroalimentacion_6").appendChild(incorrecto_6);
             document.getElementById("retroalimentacion_6").classList.add("w-100");
+        }
+
+        // Pregunta #7
+        if ($('#urgente').is(':checked')) {
+            document.getElementById("retroalimentacion_7").appendChild(correcto_7);
+            document.getElementById("retroalimentacion_7").classList.add("w-100");
+            calificacion++;
+        } else if ($('#no').is(':checked') || $('#incoherente').is(':checked') || $('#importante').is(':checked')) {
+            document.getElementById("retroalimentacion_7").appendChild(incorrecto_7);
+            document.getElementById("retroalimentacion_7").classList.add("w-100");
+        }
+
+        // Pregunta #8
+        if ($('#caracter').is(':checked')) {
+            document.getElementById("retroalimentacion_8").appendChild(correcto_8);
+            document.getElementById("retroalimentacion_8").classList.add("w-100");
+            calificacion++;
+        } else if ($('#sensibilidad').is(':checked') || $('#alma').is(':checked') || $('#cuerpo').is(':checked')) {
+            document.getElementById("retroalimentacion_8").appendChild(incorrecto_8);
+            document.getElementById("retroalimentacion_8").classList.add("w-100");
+        }
+
+        // Pregunta #9
+        if ($('#sinergizar').is(':checked')) {
+            document.getElementById("retroalimentacion_9").appendChild(correcto_9);
+            document.getElementById("retroalimentacion_9").classList.add("w-100");
+            calificacion++;
+        } else if ($('#proactividad').is(':checked') || $('#afilar').is(':checked') || $('#primero').is(':checked')) {
+            document.getElementById("retroalimentacion_9").appendChild(incorrecto_9);
+            document.getElementById("retroalimentacion_9").classList.add("w-100");
+        }
+
+        // Pregunta #10
+        if ($('#empatia').is(':checked')) {
+            document.getElementById("retroalimentacion_10").appendChild(correcto_10);
+            document.getElementById("retroalimentacion_10").classList.add("w-100");
+            calificacion++;
+        } else if ($('#dormir').is(':checked') || $('#puntualidad').is(':checked') || $('#estudiar').is(':checked')) {
+            document.getElementById("retroalimentacion_10").appendChild(incorrecto_10);
+            document.getElementById("retroalimentacion_10").classList.add("w-100");
         }
 
         
