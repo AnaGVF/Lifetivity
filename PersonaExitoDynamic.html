@@ -14,7 +14,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script defer src="js/DecalogoYokoiDynamic.js"></script>
+    <script defer src="js/PersonaExitoDynamic.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
 
 
@@ -53,38 +53,166 @@
         </div>
       </header>  
       
-      <!-- DINÁMICA - Decálogo de Yokoi Kenji y Carlos Kasuga  -->
+      <!-- DINÁMICA - ¿Cómo ser una persona exitosa? -->
       <section class="fdb-block" id="menu">
         <div class="container" style="height: 100vh;">
           
           <div class="row text-center">
             <div class="col-12" style="margin-top: 7%;">
-              <h1 style="font-family: 'Special Elite', cursive; font-weight: bold;">Juega: Adivina la palabra</h1>
+              <h1 style="font-family: 'Special Elite', cursive; font-weight: bold;">Juega: Sopa de Letras</h1>
             </div>
           </div>
-          <!-- Adivina la palabra -->          
-          <div class="row mb-5" style="border-radius: 20px; background: #f9ddff;  /* fallback for old browsers */
-              background: -webkit-linear-gradient(to top, #FFFFFF, #f9ddff);  /* Chrome 10-25, Safari 5.1-6 */
-              background: linear-gradient(to top, #FFFFFF, #f9ddff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+          <!-- Sopa de Letras -->          
+          <div class="row mb-5" style="border-radius: 20px; background: #fefbff;  /* fallback for old browsers */
+              background: -webkit-linear-gradient(to top, #FFFFFF, #fefbff);  /* Chrome 10-25, Safari 5.1-6 */
+              background: linear-gradient(to top, #FFFFFF, #fefbff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
               height: auto; padding: 40px; align-items: center; justify-content: space-around; display: flex;">
-            <div class="row text-left mt-4" style="display: flex; align-items: center; justify-content: space-evenly; flex-direction: column;">
-              <div id="resultado" style="font-weight: bold; font-size: 2em;"></div>
-              <div class="form-group">
-                <input id="letra" type="text" class="mt-4 form-control" placeholder="Escribe una letra" maxlength="1">    
-              </div>                    
-              <h2>Intentos</h2>
-              <div id="intentos" style="color: red; font-weight: bolder; font-size: 2em;"></div>            
-              <button type="button" class="btn btn-success mt-4" id="boton">Comprobar</button>
-            </div>
+            <h3>Palabras a encontrar:</h3>
+            <ul>
+              <li>Lider</li>
+              <li>Orden</li>
+              <li>Limpieza</li>
+              <li>Riesgo</li>
+              <li>Trabajo</li>
+            </ul>
+        <form id= "espacio" style="text-align: center;">
+          <table border="2px" bordercolor="#050430" bgcolor="#e2dee1">
+            <tr>
+              <th width="30" height="30" id="a1">C</th>
+              <th width="30" height="30" id="a2">X</th>
+              <th width="30" height="30" id="a3">X</th>
+              <th width="30" height="30" id="a4">C</th>
+              <th width="30" height="30" id="a5">S</th>
+              <th width="30" height="30" id="a6">I</th>
+              <th width="30" height="30" id="a7">Y</th>
+              <th width="30" height="30" id="a8">X</th>
+              <th width="30" height="30" id="a9">X</th>
+              <th width="30" height="30" id="a10">X</th>
+            </tr>
+      
+            <tr>
+              <th width="30" height="30" id="b1">I</th>
+              <th width="30" height="30" id="b2" onclick="comprobarb2()">T</th>
+              <th width="30" height="30" id="b3" onclick="comprobarb3()">R</th>
+              <th width="30" height="30" id="b4" onclick="comprobarb4()">A</th>
+              <th width="30" height="30" id="b5" onclick="comprobarb5()">B</th>
+              <th width="30" height="30" id="b6" onclick="comprobarb6()">A</th>
+              <th width="30" height="30" id="b7" onclick="comprobarb7()">J</th>
+              <th width="30" height="30" id="b8" onclick="comprobarb8()">O</th>
+              <th width="30" height="30" id="b9">O</th>
+              <th width="30" height="30" id="b10">Ñ</th>
+            </tr>
+      
+            <tr>
+              <th width="30" height="30" id="c1">W</th>
+              <th width="30" height="30" id="c2">I</th>
+              <th width="30" height="30" id="c3">G</th>
+              <th width="30" height="30" id="c4">Y</th>
+              <th width="30" height="30" id="c5">P</th>
+              <th width="30" height="30" id="c6">C</th>
+              <th width="30" height="30" id="c7" onclick="comprobarc7()">R</th>
+              <th width="30" height="30" id="c8">F</th>
+              <th width="30" height="30" id="c9" onclick="comprobarc9()">A</th>
+              <th width="30" height="30" id="c10">Z</th>
+            </tr>
+      
+            <tr>
+              <th width="30" height="30" id="d1">S</th>
+              <th width="30" height="30" id="d2">E</th>
+              <th width="30" height="30" id="d3" onclick="comprobard3()">R</th>
+              <th width="30" height="30" id="d4">X</th>
+              <th width="30" height="30" id="d5">T</th>
+              <th width="30" height="30" id="d6" onclick="comprobard6()">D</th>
+              <th width="30" height="30" id="d7">Q</th>
+              <th width="30" height="30" id="d8">X</th>
+              <th width="30" height="30" id="d9" onclick="comprobard9()">Z</th>
+              <th width="30" height="30" id="d10">T</th>
+            </tr>
 
-            <div class="row text-left mt-4" style="display: flex; align-items: center; justify-content: space-evenly; flex-direction: column;">
-              <div>
-                <img style="width: 100%;" id="imagen" src="" alt="">
-              </div>
-            </div>
+            <tr>
+              <th width="30" height="30" id="e1">D</th>
+              <th width="30" height="30" id="e2">Ñ</th>
+              <th width="30" height="30" id="e3">Z</th>
+              <th width="30" height="30" id="e4" onclick="comprobare4()">E</th>
+              <th width="30" height="30" id="e5" onclick="comprobare5()">E</th>
+              <th width="30" height="30" id="e6">P</th>
+              <th width="30" height="30" id="e7">D</th>
+              <th width="30" height="30" id="e8">K</th>
+              <th width="30" height="30" id="e9" onclick="comprobare9()">E</th>
+              <th width="30" height="30" id="e10">U</th>
+            </tr>
+
+            <tr>
+              <th width="30" height="30" id="f1">Z</th>
+              <th width="30" height="30" id="f2">S</th>
+              <th width="30" height="30" id="f3">L</th>
+              <th width="30" height="30" id="f4" onclick="comprobarf4()">N</th>
+              <th width="30" height="30" id="f5" onclick="comprobarf5()">D</th>
+              <th width="30" height="30" id="f6">F</th>
+              <th width="30" height="30" id="f7">K</th>
+              <th width="30" height="30" id="f8">E</th>
+              <th width="30" height="30" id="f9" onclick="comprobarf9()">I</th>
+              <th width="30" height="30" id="f10">A</th>
+            </tr>
+
+            <tr>
+              <th width="30" height="30" id="g1">O</th>
+              <th width="30" height="30" id="g2">E</th>
+              <th width="30" height="30" id="g3">J</th>
+              <th width="30" height="30" id="g4">T</th>
+              <th width="30" height="30" id="g5">L</th>
+              <th width="30" height="30" id="g6" onclick="comprobarg6()">I</th>
+              <th width="30" height="30" id="g7">D</th>
+              <th width="30" height="30" id="g8">U</th>
+              <th width="30" height="30" id="g9" onclick="comprobarg9()">P</th>
+              <th width="30" height="30" id="g10">K</th>
+            </tr>
+
+            <tr>
+              <th width="30" height="30" id="h1">D</th>
+              <th width="30" height="30" id="h2">Z</th>
+              <th width="30" height="30" id="h3">S</th>
+              <th width="30" height="30" id="h4">J</th>
+              <th width="30" height="30" id="h5">J</th>
+              <th width="30" height="30" id="h6">H</th>
+              <th width="30" height="30" id="h7" onclick="comprobarh7()">L</th>
+              <th width="30" height="30" id="h8">V</th>
+              <th width="30" height="30" id="h9" onclick="comprobarh9()">M</th>
+              <th width="30" height="30" id="h10">L</th>
+            </tr>
+
+            <tr>
+              <th width="30" height="30" id="i1">O</th>
+              <th width="30" height="30" id="i2" onclick="comprobari2()">R</th>
+              <th width="30" height="30" id="i3" onclick="comprobari3()">I</th>
+              <th width="30" height="30" id="i4" onclick="comprobari4()">E</th>
+              <th width="30" height="30" id="i5" onclick="comprobari5()">S</th>
+              <th width="30" height="30" id="i6" onclick="comprobari6()">G</th>
+              <th width="30" height="30" id="i7" onclick="comprobari7()">O</th>
+              <th width="30" height="30" id="i8">I</th>
+              <th width="30" height="30" id="i9" onclick="comprobari9()">I</th>
+              <th width="30" height="30" id="i10">S</th>
+            </tr>
+
+            <tr>
+              <th width="30" height="30" id="j1">D</th>
+              <th width="30" height="30" id="j2">W</th>
+              <th width="30" height="30" id="j3">H</th>
+              <th width="30" height="30" id="j4">S</th>
+              <th width="30" height="30" id="j5">Y</th>
+              <th width="30" height="30" id="j6">M</th>
+              <th width="30" height="30" id="j7">U</th>
+              <th width="30" height="30" id="j8">N</th>
+              <th width="30" height="30" id="j9" onclick="comprobarj9()">L</th>
+              <th width="30" height="30" id="j10">S</th>
+            </tr>      
+            
+          </table> 
+      
+        </form>
               <!-- Botones  -->
               <div class="row mt-4" style="width: -webkit-fill-available; display: flex; justify-content: space-evenly;">
-                  <button type="button" class="btn btn-danger" onclick="location.href='DecalogoYokoi.html'">Regresar</button>
+                  <button type="button" class="btn btn-danger" onclick="location.href='PersonaExito.html'">Regresar</button>
               </div>    
           </div>   
         </div>

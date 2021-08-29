@@ -51,121 +51,157 @@
         </div>
       </header>
 
-      <!-- Evaluación - 7 Hábitos de la Gente Altamente Efectiva  -->
+      <!-- Evaluación - ¿Cómo ser una persona exitosa? -->
       <section class="fdb-block" id="menu">
         <div class="container" style="height: auto;">
           <div class="row text-center">
             <div class="col-12" style="margin-top: 1%;">
               <h1 style="font-family: 'Special Elite', cursive; font-weight: bold;">Evaluación</h1>
-              <h1 style="font-family: 'Special Elite', cursive; font-weight: bold;">Decálogo de Yokoi Kenji y Carlos Kasuga</h1>
+              <h1 style="font-family: 'Special Elite', cursive; font-weight: bold;">¿Cómo ser una persona exitosa?</h1>
             </div>
           </div>
           <div class="row text-left mt-3" style="display: flex; align-items: center; justify-content: space-evenly; flex-direction: column;">
             <div class="col-12 col-md">
-              <div class="row mb-5" style="border-radius: 20px; background: #cbeaff;  /* fallback for old browsers */
-              background: -webkit-linear-gradient(to top, #FFFFFF, #cbeaff);  /* Chrome 10-25, Safari 5.1-6 */
-              background: linear-gradient(to top, #FFFFFF, #cbeaff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+              <div class="row mb-5" style="border-radius: 20px; background: #fdebff;  /* fallback for old browsers */
+              background: -webkit-linear-gradient(to top, #FFFFFF, #fdebff);  /* Chrome 10-25, Safari 5.1-6 */
+              background: linear-gradient(to top, #FFFFFF, #fdebff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
               height: auto; padding: 20px;">
                 <!-- Pregunta #1 -->
                 <div class="col-12 mt-2" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
-                  <h4 class="mb-3 mb-4">1. _____________ cree que la disciplina tarde o temprano vencerá a la inteligencia.</h4>
-                  <div class="h4" style="display: flex; width: -webkit-fill-available; justify-content: space-evenly;">
-                    <!-- Opción #1 -->
-                    <div>
-                        <input id="yokoi" type="checkbox" style="zoom: 1.5;"> Yokoi Kenji
-                    </div>
-                    <!-- Opción #2 -->
-                    <div>
-                        <input id="carlos" type="checkbox" style="zoom: 1.5;"> Carlos Kasuga
-                    </div>                   
-                  </div>
+                  <h4 class="mb-3 mb-4">1. Una persona emprendedora y con liderazgo sabe trabajar 
+                    <select id="pregunta1">
+                      <option value="" selected disabled hidden>...</option>
+                      <option value="equipo">en equipo</option>
+                      <option value="flojera">con flojera</option>
+                      <option value="mal">mal</option>
+                    </select>
+                  .</h4>
                   <div id="retroalimentacion">
                   </div>                    
                 </div>
 
                 <!-- Pregunta #2 -->
-                <div class="col-12 mt-5" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
-                    <h4 class="mb-3 mb-4">2. El éxito debe ser _____________.</h4>
-                    <div class="h4" style="display: flex; width: -webkit-fill-available; justify-content: space-evenly;">
-                      <!-- Opción #1 -->
-                      <div>
-                          <input id="rapido" type="checkbox" style="zoom: 1.5;"> rápido
-                      </div>
-                      <!-- Opción #2 -->
-                      <div>
-                          <input id="lento" type="checkbox" style="zoom: 1.5;"> lento
-                      </div>
-                    </div>
-                    <div id="retroalimentacion_2">
-                    </div>                    
+                <div class="col-12 mt-2" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+                  <h4 class="mb-3 mb-4">2. Generalmente los líderes son personas 
+                    <select id="pregunta2">
+                      <option value="" selected disabled hidden>...</option>
+                      <option value="desorganizada">desorganizadas</option>
+                      <option value="arriesgada">arriesgadas</option>
+                      <option value="sinorden">sin orden</option>
+                    </select> e intentan no tener miedo al fracaso.
+                  </h4>
+                  <div id="retroalimentacion_2">
+                  </div>                    
                 </div>
 
                 <!-- Pregunta #3 -->
-                <div class="col-12 mt-5" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
-                    <h4 class="mb-3 mb-4">3. Una persona debe tener educación en su ser, no sólamente de conocimientos.</h4>
-                    <div class="h4" style="display: flex; width: -webkit-fill-available; justify-content: space-evenly;">
-                      <!-- Opción #1 -->
-                      <div>
-                          <input id="si" type="checkbox" style="zoom: 1.5;"> Sí
-                      </div>
-                      <!-- Opción #2 -->
-                      <div>
-                          <input id="no" type="checkbox" style="zoom: 1.5;"> No
-                      </div>                        
-                    </div>
-                    <div id="retroalimentacion_3">
-                    </div>                    
+                <div class="col-12 mt-2" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+                  <h4 class="mb-3 mb-4">3. Si deseo ser un lider, debo aprovechar al máximo mi 
+                    <select id="pregunta3">
+                      <option value="" selected disabled hidden>...</option>
+                      <option value="comida">comida</option>
+                      <option value="estres">estrés</option>
+                      <option value="tiempo">tiempo</option>
+                    </select>.
+                  </h4>
+                  <div id="retroalimentacion_3">
+                  </div>                    
                 </div>
 
                 <!-- Pregunta #4 -->
-                <div class="col-12 mt-5" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
-                    <h4 class="mb-3 mb-4">4. La vida puede ser _____________ ante aquellas personas que solo gastan su tiempo inútilmente.</h4>
-                    <div class="h4" style="display: flex; width: -webkit-fill-available; justify-content: space-evenly;">
-                      <!-- Opción #1 -->
-                      <div>
-                          <input id="maravillosa" type="checkbox" style="zoom: 1.5;"> maravillosa
-                      </div>
-                      <!-- Opción #2 -->
-                      <div>
-                          <input id="cruel" type="checkbox" style="zoom: 1.5;"> cruel
-                      </div>                        
-                    </div>
-                    <div id="retroalimentacion_4">
-                    </div>                    
+                <div class="col-12 mt-2" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+                  <h4 class="mb-3 mb-4">4. Los líderes son de mente 
+                    <select id="pregunta4">
+                      <option value="" selected disabled hidden>...</option>
+                      <option value="abierta">abierta</option>
+                      <option value="cerrada">cerrada</option>
+                    </select>.
+                  </h4>
+                  <div id="retroalimentacion_4">
+                  </div>                    
                 </div>
 
                 <!-- Pregunta #5 -->
-                <div class="col-12 mt-5" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
-                    <h4 class="mb-3 mb-4">5. Una persona _____________ hace más de lo que se le pide, llega temprano y siempre está en un constante aprendizaje.</h4>
-                    <div class="h4" style="display: flex; width: -webkit-fill-available; justify-content: space-evenly;">
-                      <!-- Opción #1 -->
-                      <div>
-                          <input id="apasionada" type="checkbox" style="zoom: 1.5;"> apasionada
-                      </div>
-                      <!-- Opción #2 -->
-                      <div>
-                          <input id="malhumorada" type="checkbox" style="zoom: 1.5;"> malhumorada
-                      </div>                        
-                    </div>
-                    <div id="retroalimentacion_5">
-                    </div>                    
+                <div class="col-12 mt-2" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+                  <h4 class="mb-3 mb-4">5. Los líderes y las personas exitosas siempre tienen hambre de 
+                    <select id="pregunta5">
+                      <option value="" selected disabled hidden>...</option>
+                      <option value="tacos">tacos</option>
+                      <option value="conocimiento">conocimiento</option>
+                      <option value="maldad">maldad</option>
+                    </select>.
+                  </h4>
+                  <div id="retroalimentacion_5">
+                  </div>                    
                 </div>
 
                 <!-- Pregunta #6 -->
-                <div class="col-12 mt-5" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
-                    <h4 class="mb-3 mb-4">6. Si una persona no es _____________, no va a enonctrar su propósito.</h4>
-                    <div class="h4" style="display: flex; width: -webkit-fill-available; justify-content: space-evenly;">
-                      <!-- Opción #1 -->
-                      <div>
-                          <input id="genia" type="checkbox" style="zoom: 1.5;"> genia
-                      </div>
-                      <!-- Opción #2 -->
-                      <div>
-                          <input id="feliz" type="checkbox" style="zoom: 1.5;"> feliz
-                      </div>                       
-                    </div>
-                    <div id="retroalimentacion_6">
-                    </div>                    
+                <div class="col-12 mt-2" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+                  <h4 class="mb-3 mb-4">6. La 
+                    <select id="pregunta6">
+                      <option value="" selected disabled hidden>...</option>
+                      <option value="paciencia">paciencia</option>
+                      <option value="flojera">flojera</option>
+                      <option value="tardanza">tardanza</option>
+                    </select> es una virtud que tienen los líderes y que les ayuda a tomar mejores decisiones.
+                  </h4>
+                  <div id="retroalimentacion_6">
+                  </div>                    
+                </div>
+
+                <!-- Pregunta #7 -->
+                <div class="col-12 mt-2" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+                  <h4 class="mb-3 mb-4">7. Un lider debe generalmente tener una actitud 
+                    <select id="pregunta7">
+                      <option value="" selected disabled hidden>...</option>
+                      <option value="positiva">positiva</option>
+                      <option value="negativa">negativa</option>
+                    </select>.
+                  </h4>
+                  <div id="retroalimentacion_7">
+                  </div>                    
+                </div>
+
+                <!-- Pregunta #8 -->
+                <div class="col-12 mt-2" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+                  <h4 class="mb-3 mb-4">8. Una persona exitosa debe ser 
+                    <select id="pregunta8">
+                      <option value="" selected disabled hidden>...</option>
+                      <option value="negativa">negativa</option>
+                      <option value="persistente">persistente</option>
+                      <option value="desinteresada">desinteresada</option>
+                    </select>ante las metas que quiera alcanzar.
+                  </h4>
+                  <div id="retroalimentacion_8">
+                  </div>                    
+                </div>
+
+                <!-- Pregunta #9 -->
+                <div class="col-12 mt-2" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+                  <h4 class="mb-3 mb-4">9. Se necesita tener una muy buena 
+                    <select id="pregunta9">
+                      <option value="" selected disabled hidden>...</option>
+                      <option value="comunicacion">comunicacion</option>
+                      <option value="comida">comida</option>
+                      <option value="descoordinacion">descoordinación</option>
+                    </select>entre los miembros del equipo para establecer objetivos claros.
+                  </h4>
+                  <div id="retroalimentacion_9">
+                  </div>                    
+                </div>
+
+                <!-- Pregunta #10 -->
+                <div class="col-12 mt-2" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+                  <h4 class="mb-3 mb-4">10. Un lider debe generar 
+                    <select id="pregunta10">
+                      <option value="" selected disabled hidden>...</option>
+                      <option value="confusion">confusión</option>
+                      <option value="desconfianza">desconfianza</option>
+                      <option value="confianza">confianza</option>
+                    </select>para que la gente pueda apoyarlo en sus ideas y, de ser posible, tener la ayuda y apoyo necesarios.
+                  </h4>
+                  <div id="retroalimentacion_10">
+                  </div>                    
                 </div>
 
                 <!-- Calificación  -->
@@ -175,7 +211,7 @@
                 </div>
                 <!-- Enviar Respuestas  -->
                 <div class="row mt-5 mb-3" style="width: -webkit-fill-available; display: flex; justify-content: space-evenly;">
-                    <button type="button" class="btn btn-danger" onclick="location.href='DecalogoYokoi.html'">Regresar</button>
+                    <button type="button" class="btn btn-danger" onclick="location.href='PersonaExito.html'">Regresar</button>
                     <button type="button" class="btn btn-success" onclick="submit()">Enviar</button>
                 </div>              
               </div>
